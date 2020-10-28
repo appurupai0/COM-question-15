@@ -107,3 +107,25 @@ q14_btn.addEventListener('click',function(){
 // でリンク先を追加できます。
 var q15_btn = document.querySelectorAll('.q15-btn');
 console.log(q15_btn);
+for(let q15_btn_each of q15_btn){
+	q15_btn_each.addEventListener('click',function(){
+		console.log(q15_btn_each.textContent);
+
+		let parent = document.querySelector('.q15-link-list');
+		let add_a = document.createElement('a');
+
+		if(q15_btn_each.textContent == 'Google'){
+			add_a.href = 'https://google.com';
+			add_a.textContent = q15_btn_each.textContent;
+		}
+		if(q15_btn_each.textContent == 'YouTube'){
+			add_a.href = 'https://youtube.com';
+			add_a.textContent = q15_btn_each.textContent;
+		}
+		if(q15_btn_each.textContent == 'Amazon'){
+			add_a.href = 'https://amazon.com';
+			add_a.textContent = q15_btn_each.textContent;
+		}
+		parent.appendChild(add_a);
+	})
+}
