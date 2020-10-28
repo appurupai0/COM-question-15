@@ -80,7 +80,7 @@ var q12_btn = document.querySelector('.q12-btn');
 q12_btn.addEventListener('click',function(){
 	let parent = document.querySelector('.q12-result');
 	let q12_result_child_p = document.createElement('p');
-	q12_result_child_p.textContent = q12_btn.textContent;
+	q12_result_child_p.textContent = q12_btn/*ここをthisでも行ける*/.textContent;
 	parent.appendChild(q12_result_child_p);
 })
 
@@ -107,6 +107,3 @@ q14_btn.addEventListener('click',function(){
 // でリンク先を追加できます。
 var q15_btn = document.querySelectorAll('.q15-btn');
 console.log(q15_btn);
-
-	 
-
